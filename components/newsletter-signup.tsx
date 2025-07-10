@@ -25,18 +25,15 @@ export function NewsletterSignup({ variant = "default", className = "" }: Newsle
     setIsSubmitting(true)
 
     try {
-      // Using Formspree for newsletter signup - sends to info@unimax-sl.com and unimaxsl@gmail.com
-      const response = await fetch("https://formspree.io/f/mvgrbblb", {
+      // Using our Nodemailer API for newsletter signup - sends to info@unimax-sl.com and unimaxsl@gmail.com
+      const response = await fetch("/api/newsletter", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
           email: email,
-          _subject: "Newsletter Subscription - Unimax-SL",
-          _cc: "info@unimax-sl.com,unimaxsl@gmail.com",
           form_type: "newsletter_signup",
-          message: `New newsletter subscription from: ${email}`,
           website: "unimax-sl.com",
           timestamp: new Date().toISOString(),
         }),

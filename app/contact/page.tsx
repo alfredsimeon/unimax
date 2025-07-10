@@ -42,8 +42,8 @@ export default function ContactPage() {
     setSubmitStatus("idle")
 
     try {
-      // Using Formspree to send emails to info@unimax-sl.com and unimaxsl@gmail.com
-      const response = await fetch("https://formspree.io/f/mvgrbblb", {
+      // Using our Nodemailer API to send emails to info@unimax-sl.com and unimaxsl@gmail.com
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -55,9 +55,6 @@ export default function ContactPage() {
           service: formData.service,
           subject: formData.subject,
           message: formData.message,
-          _replyto: formData.email,
-          _subject: `${formData.service ? `[${formData.service}] ` : ""}${formData.subject || "Contact Form Inquiry"} - Unimax-SL Website`,
-          _cc: "info@unimax-sl.com,unimaxsl@gmail.com",
           form_type: "contact_form",
           website: "unimax-sl.com",
           timestamp: new Date().toISOString(),
