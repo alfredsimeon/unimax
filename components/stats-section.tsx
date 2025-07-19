@@ -1,11 +1,11 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { TrendingUp, Users, MapPin, Clock, Headphones } from "lucide-react"
+import { TrendingUp, Users, MapPin, Clock, Headphones, Truck } from "lucide-react"
 
 export function StatsSection() {
   const stats = [
     {
       icon: TrendingUp,
-      number: "120+",
+      number: "200+",
       label: "Monthly Deliveries",
       description: "Successful deliveries every month",
     },
@@ -32,6 +32,13 @@ export function StatsSection() {
       number: "24/7",
       label: "Customer Support",
       description: "Round-the-clock assistance",
+    },
+    // New: Owned Fleets
+    {
+      icon: Truck,
+      number: "Our Own Fleet",
+      label: "Owned Vehicles",
+      description: "We operate our own modern fleet, not external vehicles.",
     },
   ]
 

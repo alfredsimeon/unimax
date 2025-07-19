@@ -9,29 +9,30 @@ export function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/team-group-photo.jpg"
+          src="/images/freight.jpg"
           alt="Unimax-SL Professional Team"
           fill
           className="object-cover"
           priority
+          quality={100}
+          sizes="100vw"
+          style={{ objectFit: 'cover', imageRendering: 'auto' }}
+          unoptimized
         />
-        <div className="absolute inset-0 bg-primary/80" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container text-center text-white">
+      <div className="relative z-10 container text-center">
         <div className="max-w-4xl mx-auto space-y-6">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">UNIMAX-SL</h1>
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-primary-foreground/90">
-            LOGISTICS SOLUTIONS
-          </h2>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto text-primary-foreground/80 leading-relaxed">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-accent drop-shadow-lg" style={{textShadow: '0 2px 8px rgba(0,0,0,0.7)'}}>UNIMAX-SL</h1>
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-accent-foreground drop-shadow-lg" style={{textShadow: '0 2px 8px rgba(0,0,0,0.7)'}}>LOGISTICS SOLUTIONS</h2>
+          <p className="text-lg md:text-xl max-w-3xl mx-auto text-accent-foreground drop-shadow-lg" style={{textShadow: '0 2px 8px rgba(0,0,0,0.7)'}}>
             We provide flexible, reliable, and professional 24/7 logistics services across Sierra Leone. Feel free to
             explore our comprehensive range of services, and if there's something we haven't mentioned, just ask - we're
             confident we can help.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 drop-shadow-lg">
               <Link href="/contact">
                 Get Quote
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -41,7 +42,7 @@ export function HeroSection() {
               asChild
               variant="outline"
               size="lg"
-              className="border-white text-white hover:bg-white hover:text-primary"
+              className="border-white text-white hover:bg-white hover:text-primary drop-shadow-lg"
             >
               <Link href="/services">Our Services</Link>
             </Button>

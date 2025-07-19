@@ -151,10 +151,13 @@ export default function TeamPage() {
               </div>
               <div className="relative h-96">
                 <Image
-                  src="/images/team-group-photo.jpg"
+                  src="/images/logistics2.jpg"
                   alt="Unimax-SL Professional Team"
                   fill
                   className="object-cover rounded-lg"
+                  quality={100}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
                 />
               </div>
             </div>

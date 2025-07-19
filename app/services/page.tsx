@@ -14,44 +14,7 @@ export const metadata = {
 
 export default function ServicesPage() {
   const services = [
-    {
-      icon: Package,
-      title: "Package Delivery",
-      description: "Fast, secure, and reliable package delivery services across all cities in Sierra Leone.",
-      features: [
-        "Same-day delivery available",
-        "Secure handling and packaging",
-        "Proof of delivery confirmation",
-        "Insurance coverage available",
-      ],
-      image: "/images/coastal-delivery.jpg",
-    },
-    {
-      icon: Building,
-      title: "Corporate Solutions",
-      description: "Tailored logistics solutions designed specifically for businesses of all sizes.",
-      features: [
-        "Dedicated account management",
-        "Bulk delivery discounts",
-        "Scheduled pickup services",
-        "Custom reporting and analytics",
-        "Priority customer support",
-      ],
-      image: "/images/delivery-van-staff.jpg",
-    },
-    {
-      icon: Truck,
-      title: "Transport Services",
-      description: "Professional ground transportation with our modern fleet and experienced drivers.",
-      features: [
-        "Modern vehicle fleet",
-        "Experienced professional drivers",
-        "Flexible scheduling options",
-        "Load securing and protection",
-        "Route optimization",
-      ],
-      image: "/images/motorcycle-fleet-1.jpg",
-    },
+    // 1. Freight Services (top)
     {
       icon: Ship,
       title: "Freight Services",
@@ -65,31 +28,63 @@ export default function ServicesPage() {
       ],
       image: "/images/shipfrieght.jpg",
     },
+    // 2. Transport Services
+    {
+      icon: Truck,
+      title: "Transport Services",
+      description: "Professional ground transportation with our modern fleet and experienced drivers.",
+      features: [
+        "Modern vehicle fleet",
+        "Experienced professional drivers",
+        "Flexible scheduling options",
+        "Load securing and protection",
+        "Route optimization",
+      ],
+      image: "/images/motorcycle-fleet-1.jpg",
+    },
+    // 3. Express Package Delivery (combining Package Delivery + Express Delivery)
+    {
+      icon: Package,
+      title: "Express Package Delivery",
+      description: "Fast, secure, and urgent delivery services for packages and documents across all cities in Sierra Leone. Includes same-day, next-day, and priority options.",
+      features: [
+        "Same-day delivery available",
+        "Next-day delivery",
+        "Priority handling and expedited processing",
+        "Secure handling and packaging",
+        "Proof of delivery confirmation",
+        "Insurance coverage available",
+        "Emergency delivery options",
+      ],
+      image: "/images/coastal-delivery.jpg",
+    },
+    // 4. Moving and Packing Service (formerly Custom Clearance)
     {
       icon: MapPin,
-      title: "Custom Clearance",
-      description: "Expert customs clearance services for smooth import and export processes.",
+      title: "Moving and Packing Service",
+      description: "Professional moving and packing solutions for homes and businesses, ensuring safe and efficient relocation.",
       features: [
-        "Import/export documentation",
-        "Customs compliance expertise",
-        "Duty and tax calculation",
-        "Regulatory guidance",
-        "Fast processing times",
+        "Expert packing and unpacking",
+        "Safe handling of fragile items",
+        "Residential and commercial moves",
+        "Furniture disassembly and assembly",
+        "On-time and efficient service",
       ],
       image: "/images/team-safety-gear.jpg",
     },
+    // 5. Corporate Solution (now last)
     {
-      icon: Plane,
-      title: "Express Delivery",
-      description: "Urgent delivery services for time-sensitive shipments and documents.",
+      icon: Building,
+      title: "Corporate Solutions",
+      description: "Tailored logistics solutions designed specifically for businesses of all sizes.",
       features: [
-        "Same-day delivery",
-        "Next-day delivery",
-        "Priority handling",
-        "Expedited processing",
-        "Emergency delivery options",
+        "Dedicated account management",
+        "Bulk delivery discounts",
+        "Scheduled pickup services",
+        "Custom reporting and analytics",
+        "Priority customer support",
       ],
-      image: "/images/motorcycle-fleet-2.jpg",
+      image: "/images/coperatesolutions.jpg",
     },
   ]
 

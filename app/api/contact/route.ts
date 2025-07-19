@@ -12,13 +12,13 @@ const SMTP_CONFIG = {
   },
 }
 
-const COMPANY_EMAILS = ["info@unimax-sl.com", "unimaxsl@gmail.com"]
+const COMPANY_EMAILS = ["unimaxsl@gmail.com"]
 
 // Email sending function using Nodemailer
 async function sendEmail(formData: any) {
   try {
     // Create transporter
-    const transporter = nodemailer.createTransporter(SMTP_CONFIG)
+    const transporter = nodemailer.createTransport(SMTP_CONFIG)
 
     // Email content
     const mailOptions = {

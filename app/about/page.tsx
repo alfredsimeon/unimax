@@ -158,10 +158,13 @@ export default function AboutPage() {
               </div>
               <div className="relative h-96">
                 <Image
-                  src="/images/team-group-photo.jpg"
+                  src="/images/logitics.jpg"
                   alt="Unimax-SL Team"
+                  quality={100}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  style={{ objectFit: 'cover', borderRadius: '0.5rem' }}
                   fill
-                  className="object-cover rounded-lg"
+                  priority
                 />
               </div>
             </div>
